@@ -37,39 +37,38 @@
             <!-- 1 nav-->
             <li class="menu-list-item">
               <a
-                id="close__link-1"
                 href="./index.html"
                 class="menu-item__link menu-item__link--green"
                 >Home</a
               >
             </li>
             <!-- 2 nav-->
-            <li class="menu-list-item">
-              <a href="#about" id="close__link-2" class="menu-item__link"
+            <li class="menu-list-item " >
+              <a href="#about" class="menu-item__link"
                 >About</a
               >
             </li>
             <!-- 3 nav-->
             <li class="menu-list-item">
-              <a href="#service" id="close__link-3" class="menu-item__link"
+              <a href="#service" class="menu-item__link"
                 >Service</a
               >
             </li>
             <!-- 4 nav-->
             <li class="menu-list-item">
-              <a href="#a-menu" id="close__link-4" class="menu-item__link"
+              <a href="#a-menu" class="menu-item__link"
                 >Menu</a
               >
             </li>
             <!-- 5 nav-->
             <li class="menu-list-item">
-              <a href="#contact" id="close__link-5" class="menu-item__link"
+              <a href="#contact" class="menu-item__link"
                 >Contact</a
               >
             </li>
           </ul>
         </nav>
-        <button class="button-order" type="button">Order Now</button>
+        <button class="button-order" type="button" id="open-modal1">Order Now</button>
       </div>
       <div class="burger-menu-container" id="media-container">
         <div class="burger-menu-container-inner">
@@ -88,19 +87,19 @@
               >
             </li>
             <!-- 2 nav-->
-            <li class="media-menu-list-item">
+            <li class="media-menu-list-item" id="close__link-2">
               <a href="#about" class="media-menu-item__link">About</a>
             </li>
             <!-- 3 nav-->
-            <li class="media-menu-list-item">
+            <li class="media-menu-list-item" id="close__link-3">
               <a href="#service" class="media-menu-item__link">Service</a>
             </li>
             <!-- 4 nav-->
-            <li class="media-menu-list-item">
+            <li class="media-menu-list-item" id="close__link-4">
               <a href="#a-menu" class="media-menu-item__link">Menu</a>
             </li>
             <!-- 5 nav-->
-            <li class="media-menu-list-item">
+            <li class="media-menu-list-item" id="close__link-5">
               <a href="#contact" class="media-menu-item__link">Contact</a>
             </li>
           </ul>
@@ -122,7 +121,7 @@
               enjoy a hassle-free and delicious meal from the comfort of your
               own home.
             </p>
-            <button class="button-order-enjoy" type="button">Order Now</button>
+            <button class="button-order-enjoy" type="button" id="open-modal2">Order Now</button>
           </div>
           <div class="enjoy-food-right">
             <img
@@ -179,7 +178,7 @@
               </li>
             </ul>
             <div class="container--open480">
-              <button class="about-button" type="button">Order Now</button>
+              <button class="about-button" type="button" id="open-modal-about">Order Now</button>
               <a class="read-more" href=""
                 >Read More
                 <svg
@@ -485,6 +484,32 @@
         </div>
       </div>
     </footer>
+	<!-- ~~~~~~~~~~~~~~~~~~~~modal~~~~~~~~~~~~~~~~~~~ -->
+	<div class="order-modal" id="id-order-modal">
+		<div class="order-modal-inner">
+			<button class="close-modal" type="button" width="32" height="32" id="id-close-modal">
+				<svg class="close-modal__svg" width="24" height="24">
+					<use href="./images/icons.svg#icon-close-menu"></use>
+				</svg>
+			</button>
+			<p class="modal__title">Order Form</p>
+			<form class="order-modal-form">
+				<label class="modal-form-label">
+					<span class="modal-label__text">Name</span>
+					<input class="order-modal__input" name="user-name" placeholder="Your name" tabindex="1" type="text" id="modal-user-name">
+				</label>
+				<label class="modal-form-label">
+					<span class="modal-label__text">Phone number</span>
+					<input class="order-modal__input" name="phone-number" placeholder="+38(0_ _) _ _ _   _ _   _ _" tabindex="2" type="tel" id="modal-phone-number">
+				</label>
+				<label class="modal-form-label">
+					<span class="modal-label__text">E-mail</span>
+					<input class="order-modal__input" name="user-email" placeholder="example@gmail.com" tabindex="3" type="email" id="modal-user-email">
+				</label>
+				<button type="submit" class="modal-button">Send</button>
+			</form>
+		</div>
+	</div>
     <script src="./js/script.js"></script>
   </body>
 </html>
